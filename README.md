@@ -65,19 +65,19 @@ npm run lint
 
 ## GOALS
 
-- [x] Testing:
-  - [x] Unit tests.
-  - [x] E2E tests.
-- [x] Component architecture:
-  - [x] Component composition.
-  - [x] Use of props and events.
-  - [x] Business logic shared between components.
-  - [x] Reusable components.
-  - [x] Use of design patterns.
-- [x] Focus on code quality and performance:
-  - [x] Create performant code.
-- [x] CSS:
-  - [x] Use a CSS pre-processor show use of mixins or functions.
-  - [x] Class naming system, most of our projects use BEM but you can use what you feel most comfortable with.
-  - [x] Advanced use of CSS (animations, flex, grid where needed).
-- [x] Generate at least 2 views with routing.
+- Testing:
+  - Unit tests.
+  - E2E tests.
+- Component architecture:
+  - Component composition.
+  - Use of props and events.
+  - Business logic shared between components.
+  - Reusable components.
+  - Use of design patterns.
+- Focus on code quality and performance:
+  - Create performant code.
+- CSS:
+  - Use a CSS pre-processor show use of mixins or functions.
+  - Class naming system, most of our projects use BEM but you can use what you feel most comfortable with.
+  - Advanced use of CSS.
+- Generate at least 2 views with routing.
