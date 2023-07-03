@@ -77,7 +77,7 @@ npm run lint
 - [x] Focus on code quality and performance:
   - [x] Create performant code.
 - [x] CSS:
-  - [x] If you use a CSS pre-processor show use of mixins or functions.
+  - [x] Use a CSS pre-processor show use of mixins or functions.
   - [x] Class naming system, most of our projects use BEM but you can use what you feel most comfortable with.
   - [x] Advanced use of CSS (animations, flex, grid where needed).
 - [x] Generate at least 2 views with routing.
