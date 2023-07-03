@@ -1,0 +1,25 @@
+<section class="page">
+    <section class="album container" v-if="album">
+        <div class="album__image">
+            <img :src="album.image.url" alt="album image" class="album__image">
+            <div class="album__buttons">
+                <span @click="$router.go(-1)" class="button-back">
+                    Volver
+                </span>
+                <router-link to="/" tag="span" class="button-back">
+                    Home
+                </router-link>
+            </div>
+        </div>
+        <div class="album__info">
+            <h3 class="album__title">{{album.name}}</h3>
+            <div class="album__tracks">
+                <p v-for="track, index in album.tracks" class="album__track">
+                    <span class="album__track-name">{{index + 1}}. {{track.name}}</span>
+                    <span class="album__track-duration">{{track.duration}}</span>
+                </p>
+            </div>
+        </div>
+        
+    </section>
+</section>

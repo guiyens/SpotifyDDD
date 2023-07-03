@@ -1,0 +1,25 @@
+$searche_width: 500px;
+$results_width: calc(100vw - $searche_width);
+$result_width: calc($results_width / 3);
+$result_title: 70px;
+$box_height: calc($result_width / 2);
+$box_width: calc($result_width / 2);
+$box_height_mobile: calc(100vw / 4);
+$box_width_mobile: calc(100vw / 4);
+$album_info_width: 350px;
+$album_list_width: calc(100% - $album_info_width);
+$album_list_height: calc(100vh - 110px);
+$album_imgae_width: 300px;
+$track_duration_width: 100px;
+$track_name_width: calc(100% - $track_duration_width);
+$track_image_width: 300px;
+$track_info_width: calc(100% - $track_image_width);
+ 
+$color_grey: #F2F2F2;
+$color_black: #58595b;
+$color_yellow: #f2cf63;
+$color_blue: rgb(101, 147, 166);
+
+$font_titles: 'Montserrat', sans-serif;
+$font_text: 'Oxygen', sans-serif;
+

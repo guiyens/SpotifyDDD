@@ -1,0 +1,83 @@
+@import "src/infrastructure/assets/scss/variables.scss";
+@import "src/infrastructure/assets/scss/mixins.scss";
+
+.album{
+    @include main-layout;
+    padding-top: 50px;
+    align-items: flex-start;
+    color: $color_black;
+
+    &__image{
+        width: $album_imgae_width; 
+
+        @media (max-width: 800px) {
+            width: 100%;
+        }      
+    }
+
+    &__info{
+        width: $track_info_width;
+        background-color: $color_yellow;
+
+        @media (max-width: 800px) {
+            width: 100%;
+            margin-top: -3px;
+        }   
+    }
+
+    &__title{
+        font-size: 40px;
+        font-family: $font_titles;
+        font-weight: 700;
+        padding: 30px 50px;
+        background-color: $color_black;
+        color: $color_yellow;
+
+        @media (max-width: 800px) {
+            font-size: 22px;
+            padding: 20px;
+            line-height: 29px;
+        }  
+    }
+    
+    &__tracks{
+        width: 100%;
+    }
+
+    &__track{
+        font-size: 18px;
+        padding: 20px 50px;
+        border-bottom: 1px solid $color_black;
+        font-family: $font_text;
+
+        &:first-of-type{
+            border-top: 1px solid $color_black;
+        }
+
+        &:last-of-type{
+            border-bottom: none;
+        }
+    }
+
+    &__track-name{
+        width: $track_name_width;
+        display: inline-block;
+        vertical-align: middle;
+        @include text-ellipsis;
+    }
+
+    &__track-duration{
+        width: $track_duration_width;
+        display: inline-block;
+        vertical-align: middle;
+        text-align: right;
+    }
+
+    &__buttons{
+        text-align: center;
+
+        @media (max-width: 800px) {
+            display: none;
+        }   
+    }
+}

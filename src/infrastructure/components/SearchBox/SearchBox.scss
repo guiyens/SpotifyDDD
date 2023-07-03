@@ -1,0 +1,62 @@
+@import "src/infrastructure/assets/scss/variables.scss";
+
+.searcher-box{
+    height: 100vh;
+    width: $searche_width;
+    background-color: $color_blue;
+    font-family: $font_text;
+    color: $color_grey;
+    padding: 50px 30px;
+
+    @media (max-width: 1000px) {
+        width: 100%;
+        height: auto;
+        padding: 30px 30px 0;
+    }
+
+    &__title{
+        font-family: $font_titles;
+        font-weight: 800;
+        font-size: 50px;
+        color: $color_yellow; 
+
+        &--light{
+            font-weight: 100;
+            color: $color_grey;
+        }
+    }
+
+    &__input{
+        width: 100%;    
+        background: $color_black;
+        color: $color_grey;
+        font-size: 19px;
+        padding: 10px;
+        border: none;
+        outline: none;
+        margin: 40px 0 40px;
+        box-sizing: border-box;
+
+        &:focus{
+            outline: none;
+        }
+    }
+
+    &__body{
+        @media (max-width: 1000px) {
+            display: none;
+        }
+    }
+    
+    &__text{
+        font-weight: 100;
+        font-size: 19px;
+        line-height: 25px;
+        margin: 20px 0;
+
+        &--highlight{
+            font-weight: 700;
+            color: $color_yellow;
+        }
+    }
+}

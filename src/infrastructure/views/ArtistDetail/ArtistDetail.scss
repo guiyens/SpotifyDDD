@@ -1,0 +1,121 @@
+@import "src/infrastructure/assets/scss/variables.scss";
+@import "src/infrastructure/assets/scss/mixins.scss";
+
+.artist{
+    font-family: $font_text;
+
+    &__header{
+        background: $color_yellow;
+        width: $album_info_width;
+        height: 100vh;
+        position: fixed;
+
+        @media (max-width: 700px) {
+          position: inherit;
+          height: auto;
+          width: 100%;
+        }
+    }
+
+    &__title{
+        font-size: 50px;
+        padding: 30px 0;
+        font-family: $font_titles;
+        text-align: center;
+        font-weight: 700;
+        background-color: $color_blue;
+        color: $color_yellow;
+
+        @media (max-width: 700px) {
+            display: none;
+          }
+    }
+
+    &__image{
+        width: 100%;
+    }
+
+    &__name{
+        font-size: 50px;
+        padding: 30px 20px;
+        font-weight: 700;
+        background: $color_black;
+        color: $color_grey;
+        margin-top: -2px;
+
+        @media (max-width: 700px) {
+            padding: 20px;
+            text-align: center;
+            font-size: 36px;
+        }
+    }
+
+    &__genre-container{
+        color: $color_black;
+        padding: 20px;
+    }
+
+    &__genre-title{
+        font-family: $font_titles;
+        font-size: 30px;
+        font-weight: 700;
+        margin-bottom: 20px;
+
+        @media (max-width: 700px) {
+            font-size: 26px;
+        }
+    }
+
+    &__genre{
+        text-transform: uppercase;
+        font-size: 20px;
+        line-height: 25px;
+    }
+
+    &__body{
+        width: $album_list_width;
+        height: 100vh;
+        overflow: hidden;
+        position: fixed;
+        left: $album_info_width;
+
+        @media (max-width: 700px) {
+            position: inherit;
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__list{
+        @include main-layout;
+        height: $album_list_height;
+        cursor: pointer;
+
+        @media (max-width: 700px) {
+            overflow-y: inherit;
+            height: auto;
+        }
+    }
+
+    &__album{
+        width: 25%;
+    }
+
+    &__album-image{
+        width: 100%;
+    }
+
+    &__album-name{
+        padding: 5px 10px 5px;
+        font-size: 20px;
+        width: 100%;
+        @include text-ellipsis;
+    }
+
+    &__album-year{
+        padding: 0px 10px 15px;
+        font-size: 14px;
+        color: $color_blue;
+    }
+}
+

@@ -1,0 +1,16 @@
+<section class="result-box__container" v-if="info">
+    <article class="result-box" v-for="item in info" v-if="resultType !== resultTypes.Track" :data-testid="resultType === resultTypes.Artist ? 'result-box--artists ' + item.name : 'result-box--albums ' + item.name">
+        <router-link :to="item.url">
+            <img class="result-box__image" v-if="item.image" :src="item.image.url" alt="result box image">
+            <h4 class="result-box__text-content" :class="{'result-box__text-content--artists': resultType !== resultTypes.Artist, 'result-box__text-content--albums': resultType !== resultTypes.Album}">
+                <span class="result-box__text">{{item.name}}</span>
+            </h4>
+        </router-link>
+    </article>
+    <article class="result-box" v-for="item in info" v-if="resultType === resultTypes.Track" :data-testid="'result-box--tracks ' + item.name">
+        <img class="result-box__image" v-if="item.image" :src="item.image.url" alt="item image">
+        <h4 class="result-box__text-content result-box__text-content--tracks" :class="{'result-box__text-content--disabled': !item.trackUrl}" @click="playTrack(item.trackUrl)">
+            <span class="result-box__text">{{item.name}}</span>
+        </h4>
+    </article>
+</section>  

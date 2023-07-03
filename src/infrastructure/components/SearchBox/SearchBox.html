@@ -1,0 +1,17 @@
+<aside class="searcher-box">
+    <header class="searcher-box__header">
+        <h1 class="searcher-box__title">
+            <span class="searcher-box__title--light">BUSCADOR</span>
+            SPOTIFY
+        </h1>
+        <form>
+            <input type="text" v-model="searchData" @keyup="type" class="searcher-box__input" placeholder="Escribe aqui">            
+        </form>
+    </header>
+    <section class="searcher-box__body">
+        <p class="searcher-box__text">Al buscar obtendrás los 20 primeros <strong class="searcher-box__text--highlight">álbumes, artistas y canciones</strong> que coincidan con el texto que escribiste.</p>
+        <p class="searcher-box__text">Al <strong class="searcher-box__text--highlight">clicar en un artista</strong> navegarás para ver algo de información del artista junto con su <strong class="searcher-box__text--highlight">listado de álbumes</strong> publicados</p>
+        <p class="searcher-box__text">Al <strong class="searcher-box__text--highlight">clicar en un álbum</strong> navegarás para ver el <strong class="searcher-box__text--highlight">listado de canciones</strong> que contiene ese álbum</p>
+        <p class="searcher-box__text">Al clicar en una canción <strong class="searcher-box__text--highlight">se reproducira </strong> si dicha canción dispone de preview</p>
+    </section>
+</aside>

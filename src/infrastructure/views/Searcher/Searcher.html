@@ -1,0 +1,26 @@
+<section class="page page--searcher">
+    
+    <search-box v-on:searching="search"></search-box>
+    <audio controls class="audio-player" ref="audio" autoplay v-if="trackActive">
+        <source :src="trackActive">
+    </audio>
+
+    <section class="no-results" v-if="!searchResult"></section>
+    <section class="results" v-if="searchResult">
+        <section class="result result--artists">
+            <h2 class="result__title result__title--artists">Artistas</h2>
+            <ResultBox :info="searchResult.artists" :resultType="resultTypes.Artist"></ResultBox>
+        </section>
+
+        <section class="result result--albums">
+            <h2 class="result__title result__title--albums">Albunes</h2>
+            <ResultBox :info="searchResult.albums" :resultType="resultTypes.Album"></ResultBox>            
+        </section>
+        
+        <section class="result result--tracks">
+            <h2 class="result__title result__title--tracks">Canciones</h2>
+            <ResultBox :info="searchResult.tracks" :resultType="resultTypes.Track" @playTrack="setTrackActive"></ResultBox> 
+        </section>
+    </section>
+        
+</section>

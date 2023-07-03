@@ -1,0 +1,31 @@
+<section class="page" v-if="artist">
+    <section class="artist">
+        <aside class="artist__header">
+            <img :src="artist.image.url" alt="artist image" class="artist__image">
+            <h3 class="artist__name">{{artist.name}}</h3>
+            <section class="artist__genre-container">
+                <h3 class="artist__genre-title">Generos</h3>
+                <p class="artist__genre" v-for="genre in artist.genres">
+                    {{genre}}
+                </p>
+            </section>
+        </aside>
+        <section class="artist__body">
+            <h1 class="artist__title">
+                <router-link to="/" tag="span" class="button-back button-back--artist">
+                    Volver
+                </router-link>
+                Artist
+            </h1>
+            <ul class="artist__list">
+                <li v-for="album in artist.albums" class="artist__album">
+                    <router-link :to="'/AlbumDetail/' + album.id" tag="div" :data-testid="album.name">
+                        <img :src="album.image.url"  class="artist__album-image" alt="album image">
+                        <p :title="album.name" class="artist__album-name">{{album.name}}</p>
+                        <p class="artist__album-year">{{album.year}}</p>
+                    </router-link>
+                </li>
+            </ul>
+        </section>
+    </section>
+</section>
